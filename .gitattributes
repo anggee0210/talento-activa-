@@ -1,0 +1,3 @@
+# Finales de línea LF en todo el repo: los hashes de tests.lock.json
+# deben coincidir en cualquier sistema (core.autocrlf de Windows incluido).
+* text=auto eol=lf
