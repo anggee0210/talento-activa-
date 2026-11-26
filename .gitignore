@@ -13,3 +13,6 @@ coverage/
 
 # Config local de Claude Code (no se comparte)
 .claude/settings.local.json
+
+# Vista compilada (la genera scripts/build-vista.mjs)
+src/view/public/js/

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscar alumnos · Talento Activa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="cabecera__dentro">
+      <a class="logo logo--oscuro" href="/"><span class="logo__icono">TA</span><span class="logo__texto">Talento Activa</span></a>
+      <nav class="menu" aria-label="Principal">
+        <a class="menu__enlace menu__enlace--activo" href="/alumnos.html" aria-current="page">Alumnos</a>
+        <a class="menu__enlace" href="/alumnos.html">Ediciones</a>
+        <a class="menu__enlace" href="/alumnos.html">Guardados (<span id="n-guardados">0</span>)</a>
+      </nav>
+      <a class="cabecera__salir" href="/">Salir</a>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <p class="banda-demo">Datos de ejemplo · la búsqueda real llegará con la API de alumnos</p>
+    <div class="pagina__titulo">
+      <h1>Alumnos disponibles</h1>
+      <p>Solo aparecen quienes terminaron la formación y tienen su perfil activo.</p>
+    </div>
+
+    <div class="buscador">
+      <aside class="filtros" aria-label="Filtros">
+        <div class="campo">
+          <label for="f-texto">Buscar</label>
+          <input id="f-texto" type="search" placeholder="Nombre o tecnología">
+        </div>
+        <fieldset class="grupo">
+          <legend>Tecnología</legend>
+          <div class="chips" id="f-tecnologia"></div>
+        </fieldset>
+        <fieldset class="grupo">
+          <legend>Modalidad</legend>
+          <div class="chips" id="f-modalidad"></div>
+        </fieldset>
+        <label class="check"><input id="f-traslado" type="checkbox"> Disponible para traslado</label>
+        <label class="check"><input id="f-buscando" type="checkbox" checked> Solo buscando empleo</label>
+      </aside>
+
+      <section class="resultados-zona" aria-label="Resultados">
+        <p class="contador" id="contador" aria-live="polite"></p>
+        <div class="rejilla" id="resultados"></div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="/js/buscador.js"></script>
+</body>
+</html>

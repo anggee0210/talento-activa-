@@ -4,6 +4,14 @@
     "tests/app.test.ts": {
       "sha256": "7e9cbc3824d8c69e511ca8848a6daaf1b638a1a4789ac0f50fda69671fd78c67",
       "lockedAt": "2026-11-26T09:14:13.541Z"
+    },
+    "tests/vista/buscador.test.ts": {
+      "sha256": "ca93c98796870bbd4e41fa9e6e06ca504bd499e2b0645be4482ddc289ac23385",
+      "lockedAt": "2026-11-26T09:49:44.155Z"
+    },
+    "tests/vista/paginas.test.ts": {
+      "sha256": "787aafcd63a1a6692c1d62d7cb7ab97c5ecffed0d67a24d75a47900e94ea25ac",
+      "lockedAt": "2026-11-26T09:49:44.156Z"
     }
   }
 }
