@@ -1,4 +1,9 @@
 {
   "version": 1,
-  "locked": {}
+  "locked": {
+    "tests/app.test.ts": {
+      "sha256": "7e9cbc3824d8c69e511ca8848a6daaf1b638a1a4789ac0f50fda69671fd78c67",
+      "lockedAt": "2026-11-26T09:14:13.541Z"
+    }
+  }
 }

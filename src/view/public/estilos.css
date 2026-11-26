@@ -1,0 +1,59 @@
+:root {
+  --azul-900: #12317F;
+  --azul-700: #1B45B8;
+  --azul-100: #EAF0FD;
+  --fondo: #F6F7F9;
+  --superficie: #FFFFFF;
+  --borde: #C9CED8;
+  --texto: #14171F;
+  --texto-suave: #545B6B;
+  --error-fondo: #FDECEC;
+  --error-texto: #9B1C1C;
+  --radio: 10px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
+h1, h2 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+
+.acceso { min-height: 100vh; display: flex; flex-wrap: wrap; }
+.acceso__marca {
+  flex: 1 1 480px; background: var(--azul-900); color: #fff; padding: 56px 64px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 48px;
+}
+.acceso__claim { max-width: 520px; display: flex; flex-direction: column; gap: 20px; }
+.acceso__claim h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.08; }
+.acceso__claim p { margin: 0; font-size: 18px; line-height: 1.55; color: #D6DFF7; }
+.acceso__pie { margin: 0; font-size: 14px; color: #B9C7EE; }
+.acceso__form-zona { flex: 1 1 480px; padding: 56px 24px; display: flex; align-items: center; justify-content: center; }
+
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo__icono {
+  width: 40px; height: 40px; border-radius: 10px; background: #fff; color: var(--azul-900);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;
+}
+.logo__texto { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 20px; }
+
+.form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 22px; }
+.form__cabecera { display: flex; flex-direction: column; gap: 8px; }
+.form__cabecera h2 { font-size: 30px; font-weight: 600; }
+.form__cabecera p { margin: 0; font-size: 15px; color: var(--texto-suave); }
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-size: 14px; font-weight: 500; }
+.campo input {
+  height: 46px; padding: 0 14px; border: 1px solid var(--borde); border-radius: var(--radio);
+  font: inherit; font-size: 15px; background: var(--superficie);
+}
+.campo input:focus { outline: 3px solid var(--azul-100); border-color: var(--azul-700); }
+.boton {
+  height: 48px; border: 0; border-radius: var(--radio); background: var(--azul-700); color: #fff;
+  font: inherit; font-weight: 600; font-size: 16px; cursor: pointer;
+}
+.boton:hover { background: var(--azul-900); }
+.alerta { margin: 0; padding: 12px 14px; border-radius: var(--radio); background: var(--error-fondo); color: var(--error-texto); font-size: 14px; }
+.aviso { margin: 0; padding: 14px 16px; border-radius: var(--radio); background: #EEF1F6; font-size: 14px; line-height: 1.5; color: #3F4554; }
+
+@media (max-width: 600px) {
+  .acceso__marca { padding: 32px 16px; }
+  .acceso__form-zona { padding: 32px 16px; }
+}

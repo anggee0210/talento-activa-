@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso · Talento Activa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <div class="acceso">
+    <section class="acceso__marca">
+      <div class="logo"><span class="logo__icono">TA</span><span class="logo__texto">Talento Activa</span></div>
+      <div class="acceso__claim">
+        <h1>Talento IT reconvertido, listo para tu equipo.</h1>
+        <p>Perfiles de las personas que han terminado con éxito la formación Xarxatec Activa, con sus proyectos y su stack.</p>
+      </div>
+      <p class="acceso__pie">Una iniciativa de Xarxatec Activa</p>
+    </section>
+
+    <main class="acceso__form-zona">
+      <form class="form" id="form-login" novalidate>
+        <div class="form__cabecera">
+          <h2>Iniciar sesión</h2>
+          <p>Accede con la cuenta que te enviamos por invitación.</p>
+        </div>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required>
+        </div>
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Mínimo 12 caracteres" minlength="12" maxlength="256" required>
+        </div>
+        <p class="alerta" id="alerta" role="alert" hidden></p>
+        <button class="boton" type="submit">Entrar</button>
+        <p class="aviso">No hay registro público. El equipo de Xarxatec Activa crea las cuentas por invitación.</p>
+      </form>
+    </main>
+  </div>
+  <script>
+    // Provisional: el login real llega en la T07 (POST /api/auth/login).
+    document.getElementById('form-login').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const alerta = document.getElementById('alerta');
+      alerta.textContent = 'El inicio de sesión aún no está disponible.';
+      alerta.hidden = false;
+    });
+  </script>
+</body>
+</html>
